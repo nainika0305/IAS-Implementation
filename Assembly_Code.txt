@@ -1,0 +1,20 @@
+//assembly lang program 
+M={ a, b, c, a_2, dis, 4, 2, root_d, x1, x2  }
+
+DISC M[0],M[1],M[2] //these are represented by 4 bits //496
+STOR M[4] //497
+JUMP + M[500,0:19] //498
+HALT //499
+SQRT M[4] STOR M[7] //500
+LOAD MQ,M[0] //501 
+MUL M[6] LOAD MQ //502
+STOR M[3] //503
+//x1
+LOAD -M[1] ADD M[7] //504
+DIV M[3] LOAD MQ //505
+STOR M[8] //506
+//x2
+LOAD -M[1] SUB M[7] //507
+DIV M[3] LOAD MQ //508
+STOR M[9] //509
+EXIT //510
